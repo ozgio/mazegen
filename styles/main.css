@@ -1,0 +1,55 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 5px;
+}
+
+header input {
+    width: 5em;
+}
+
+.maze {
+    padding: 5px;
+}
+
+.maze table {
+    border-collapse: collapse;
+}
+
+.maze tr {
+    margin: 0px;
+}
+
+.maze td {
+    font-size: 8px;
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid #000;
+}
+
+.maze .borderLeft {
+    border-left-width: 2px;
+}
+
+.maze .borderRight {
+    border-right-width: 2px;
+}
+
+.maze .borderTop {
+    border-top-width: 2px;
+}
+
+.maze .borderBottom {
+    border-bottom-width: 2px;
+}

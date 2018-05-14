@@ -1,0 +1,46 @@
+<!-- Generator is written with EcmaScript 6. Your should use a modern browser to run this script. -->
+<html>
+<head>
+    <title>Maze</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+</head>
+
+<body>
+    <header>
+        <strong>Maze generator</strong>
+        <input type="number" name="mazeWidth" id="mazeWidth" min="2" max="100" value="20"\> x
+        <input type="number" name="mazeHeight" id="mazeHeight" min="2" max="100" value="20"\>
+        <button id="generateBtn">Generate</button>
+    </header>
+    <section id="maze" class="maze">
+    </section>
+</body>
+<script type="module">
+    //TODO print message for old browsers
+    import {Maze} from './scripts/mazegen.js'; 
+    const minSize = 2;
+    const maxSize = 200;
+    const defaultSize = 20
+
+    document.getElementById("generateBtn").onclick = function() {
+        let width = parseInt(document.getElementById("mazeWidth").value, 10);
+        let height = parseInt(document.getElementById("mazeHeight").value, 10);
+        if(width < minSize || width > maxSize) { 
+            alert(`Width should be between ${minSize} and ${maxSize}`);
+            return;
+        }
+
+        if(height < minSize || height > maxSize) { 
+            alert(`Height should be between ${minSize} and ${maxSize}`);            
+            return;
+        }
+        let elm = document.getElementById('maze'); 
+    
+        let m = new Maze(width, height); 
+        m.generate(); 
+        m.drawTable(elm);
+    }
+
+</script>
+
+</html>
