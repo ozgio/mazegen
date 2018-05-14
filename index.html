@@ -8,8 +8,8 @@
 <body>
     <header>
         <strong>Maze generator</strong>
-        <input type="number" name="mazeWidth" id="mazeWidth" min="2" max="100" value="20"\> x
-        <input type="number" name="mazeHeight" id="mazeHeight" min="2" max="100" value="20"\>
+        <input type="number" name="mazeWidth" id="mazeWidth" min="2" max="100" value="100"\> x
+        <input type="number" name="mazeHeight" id="mazeHeight" min="2" max="100" value="50"\>
         <button id="generateBtn">Generate</button>
     </header>
     <section id="maze" class="maze">
@@ -22,7 +22,7 @@
     const maxSize = 200;
     const defaultSize = 20
 
-    document.getElementById("generateBtn").onclick = function() {
+    function generate() {
         let width = parseInt(document.getElementById("mazeWidth").value, 10);
         let height = parseInt(document.getElementById("mazeHeight").value, 10);
         if(width < minSize || width > maxSize) { 
@@ -40,6 +40,9 @@
         m.generate(); 
         m.drawTable(elm);
     }
+
+    document.getElementById("generateBtn").onclick = generate;
+    generate()
 
 </script>
 
