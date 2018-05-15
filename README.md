@@ -1,7 +1,11 @@
 Maze Generator
 --------------
 
-Recursive backtracking algorithm for maze generation in Javascript  
+Recursive backtracking algorithm for maze generation in Javascript. 
+
+
+__Live Demo__:<br>
+https://codepen.io/ozgio/full/vjadyW/
 
 Generator is written with EcmaScript 6. Your should use a modern browser to
 run this script. 
