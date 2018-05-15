@@ -17,9 +17,7 @@ export class Maze {
     constructor(width, height) {
         this.width = width;
         this.height = height;
-        this.grid = Array(height).fill(null)
-            .map((r, y) => Array(width).fill(null)
-                .map((c, x) => new Node(x, y)));
+        this.grid = [...Array(height)].map((r, y) => [...Array(width)].map((c, x) => new Node(x, y)));
     }
 
     generate() {
